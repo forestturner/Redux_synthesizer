@@ -2,7 +2,7 @@ import React from 'react';
 import {NOTES_NAMES, TONES} from '../../util/tones';
 import Note from '../../util/note';
 import $ from 'jquery';
-
+import NoteKey from './note_key';
 // const Synth = (props)=>(
 //   <div>Synth</div>
 // );
@@ -47,8 +47,8 @@ class Synth extends React.Component {
 
   render(){
     this.playNotes();
-    const rend = this.notes.map((note,id)=>(
-      <li key={id}>{note.oscillatorNode.frequency.value}</li>
+    const rend = NOTES_NAMES.map((note,id)=>(
+      <NoteKey name={note} key={id}/>
     ));
     return (
       <ul>

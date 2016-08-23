@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 document.addEventListener("DOMContentLoaded", ()=>{
   const store = configureStore();
   const el = document.getElementById("root");
+  window.store = store;
   ReactDOM.render(Root({store}), el);
 });
 // window.note = Note;

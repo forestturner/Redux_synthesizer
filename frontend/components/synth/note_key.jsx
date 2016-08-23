@@ -1,7 +1,9 @@
 import React from 'react';
 
-const NoteKey = (props) =>{
+const NoteKey = ({name}) =>{
     return (
-      <li>props.name</li>
+      <li>{name}</li>
     );
 };
+
+export default NoteKey;
